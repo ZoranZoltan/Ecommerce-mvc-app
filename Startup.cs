@@ -2,6 +2,7 @@ using Ecommerce_mvc_app.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -25,7 +26,7 @@ namespace Ecommerce_mvc_app
         public void ConfigureServices(IServiceCollection services)
         {
             //Konfiguracija baze
-            services.AddDbContext<AppDbContext>();
+            _ = services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString: Configuration.GetConnectionString("DefaultConnectionString")));
 
             services.AddControllersWithViews();
         }
@@ -56,6 +57,9 @@ namespace Ecommerce_mvc_app
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //Postavka baze
+            AppDbInitializer.Seed(app);
         }
     }
 }
