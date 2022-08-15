@@ -15,5 +15,7 @@ namespace Ecommerce_mvc_app.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
+        //Poveznice
+        public List<Movie> Movies { get; set; }
     }
 }

@@ -15,6 +15,9 @@ namespace Ecommerce_mvc_app.Models
         public string ProfilePictureURL { get; set; }
         public string FullName { get; set; }
         public string Bio { get; set; }
+
+        //Poveznice
+        public List<Movie> Movies { get; set; }
     }
 }
 
