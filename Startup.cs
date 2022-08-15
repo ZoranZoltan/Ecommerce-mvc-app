@@ -1,4 +1,5 @@
 using Ecommerce_mvc_app.Data;
+using Ecommerce_mvc_app.Data.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,8 @@ namespace Ecommerce_mvc_app
         {
             //Konfiguracija baze
             _ = services.AddDbContext<AppDbContext>(options => options.UseSqlServer(connectionString: Configuration.GetConnectionString("DefaultConnectionString")));
+            // Konfiguracija servisa
+            services.AddScoped<IActorsService, ActorsService>();
 
             services.AddControllersWithViews();
         }

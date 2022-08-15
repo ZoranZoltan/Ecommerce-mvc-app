@@ -17,27 +17,27 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <div class="navbar-collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="navbar-nav flex-grow-1">
-                            <a class="nav-link text-dark" asp-controller="Movies" asp-action="Index"><i class="badge-ifo bi-film"></i>Movies</a>
+                            <a class="nav-link text-dark" asp-controller="Movies" asp-action="Index"><i class="badge-info bi-film"></i>Movies</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdovn" role="button" data-toggle="button" aria-haspopup="true" aria-expanded="false" >
-                                <i class="bg-warning"></i>Managment
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="bi bi-gear"></i> Management
                             </a>
 
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" asp-controller="Cinemas" asp-action="Index"><i class="bi-film"></i>Cinemas</a>
-                                <a class="dropdown-item" asp-controller="Producers" asp-action="Index"><i class="bi-headset"></i>Producer</a>
-                                <a class="dropdown-item" asp-controller="Actors" asp-action="Index"><i class="bi-film"></i>Actors</a>
+                                <a class="dropdown-item" asp-controller="Cinemas" asp-action="Index"><i class="bi bi-camera-reels"></i> Cinemas</a>
+                                <a class="dropdown-item" asp-controller="Producers" asp-action="Index"><i class="bi bi-headset"></i> Producers</a>
+                                <a class="dropdown-item" asp-controller="Actors" asp-action="Index"><i class="bi bi-person-square"></i> Actors</a>
                             </div>
                         </li>
                     </ul>
 
-                    <form class="form-inline my-2 my-lg-0" asp-controller="Movies" asp-action="Filter" style="padding-right: 25px" >
-                        <input name="searchString" type="text" class="form-control" placeholder="Search for a movie..."/>
-                        <button class="btn-outline-success my-2 my-sm-0" type="submit" ><i class="bi-film">Find</i></button>
+                    <form class="form-inline my-2 my-lg-0" asp-controller="Movies" asp-action="Filter" style="padding-right: 25px">
+                        <input name="searchString" type="text" class="form-control" placeholder="Search for a movie..." />
+                        <button class="btn-outline-success my-2 my-sm-0" type="submit"><i class="bi-film">Find</i></button>
                     </form>
 
                 </div>
@@ -52,7 +52,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2022 - Ecommerce_mvc_app 
+            &copy; 2022 - Ecommerce_mvc_app
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
